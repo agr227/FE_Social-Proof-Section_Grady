@@ -1,0 +1,182 @@
+/* Setting the size, spacing, and effect for the element .card as well as 
+the pre-designated font size */
+
+.card {
+    font-size: 15px;
+    margin-top: 200px;
+    margin-left: 175px;
+    max-width: 1450px;
+    max-height: 850px;
+    border: 1px solid white;
+    box-shadow: 0 40px 40px 0 rgba(0, 0, 0, .25);
+}
+
+/* Title and #about design/layout and spacing*/
+
+.title {
+    color: hsl(300, 43%, 22%);
+    margin-top: 100px;
+    margin-left: 125px;
+    max-width: 600px;
+}
+
+.title h1 {
+    font-family: "Spartan", sans-serif;
+    font-weight: 900px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.title #about {
+    font-size: 15px;
+    color: hsl(303, 10%, 53%);
+    line-height: 25px;
+    max-width: 470px;
+}
+
+/* Floats the star review divs to the right of the title and, using relative
+positioning, aligning them to the top of the title */
+
+div.reviews {
+    float: right;
+    position: relative;
+    margin: 0;
+    top: -275px;
+    right: 130px;
+}
+
+/* Flex display places the text alongside the star images. As well, sizing
+the review boxes in comparison to each other and creating a max width to
+contain the two elements */
+
+div.reviews div {
+    display: flex;
+    margin-bottom: 15px;
+    width: 500px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    border-radius: 5px;
+    background-color: hsl(300, 24%, 96%);
+}
+
+/* By setting a width for the images, they are allowed to space out evenly
+within the designated width. The other attributes give spacing and design
+to the elements */
+
+div.reviews div #star-rating {
+    width: 120px;
+    margin: 0 0;
+}
+
+div.reviews div img {
+    padding-right: 5px;
+}
+
+div.reviews div p {
+    padding-top: 15px;
+    padding-left: 50px;
+    color: hsl(300, 43%, 22%);
+    font-size: 15px;
+    font-weight: 900px;
+    text-align: left;
+}
+
+/* Used to indent the second and third reviews */
+
+#r2 {
+    margin-left: 50px;
+}
+
+#r3 {
+    margin-left: 100px;
+}
+
+/* I decided to split the .card into top and bottom so I could float the
+star reviews and the personal testimonies. I had quite the issue floating
+the bottom reviews. Figured out I was unable to float due to the h/w
+restrictions I was putting on the parent element .person-review. Once
+I had floated everything to the left I had to make position relative
+and alter the positioning  to fit where I needed it.*/
+
+.card-bottom div.person-review {
+    display: flex;
+    float: left;
+    overflow: visible;
+    flex-wrap: wrap;
+    position: relative;
+    top: -200px;
+    left: 125px;
+    text-align: left;
+}
+
+/*I split each person into a seperate div solely so I could alter the
+positions of the divs. You can see I copied the attributes exactly. 
+Need to work on cleaning up my CSS so I'm not having to write all
+this excess code every time I'm placing multiple elements.*/
+
+.person-review .colton {
+    max-width: 320px;
+    max-height: 250px;
+    margin-right: 30px;
+    background-color: hsl(300, 43%, 22%);
+    border: .5px solid white;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.person-review .irene {
+    max-width: 320px;
+    max-height: 250px;
+    margin-right: 30px;
+    background-color: hsl(300, 43%, 22%);
+    border: .5px solid white;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    top: 25px;
+}
+
+.person-review .anne {
+    max-width: 320px;
+    max-height: 250px;
+    background-color: hsl(300, 43%, 22%);
+    border: .5px solid white;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    top: 50px;
+}
+
+/*Once I had the positioning of the divs I decorated the seperate elements
+within the divs. Floated the picture to the left of the heading. I had to 
+move the img to the top of the HTML so I could seperate the heading and the 
+testimony .text*/
+
+.person-review .prof-pic {
+    float: left;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+.person-review .name {
+    color: hsl(0, 0%, 100%);
+    font-weight: 500px;
+    line-height: 5px;
+    padding-top: 20px;
+}
+
+.person-review .buyer {
+    color: hsla(333, 80%, 67%, 0.551);
+    margin-bottom: 30px;
+}
+
+.person-review .text {
+    color: hsl(300, 24%, 96%);
+    font-weight: 400px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+/*Overall I feel like I am getting faster and retaining more CSS, but I'm still
+utilizing Google quite a bit. Need to work on floating elements and why I'm having
+issues working my margins and padding*/
